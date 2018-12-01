@@ -1,0 +1,13 @@
+.link {
+  cursor: pointer;
+  color: black;
+  outline: none;
+  font-size: 18px;
+  text-decoration: underline;
+  border: none;
+  background: transparent;
+}
+
+.link:hover {
+  color: grey;
+}

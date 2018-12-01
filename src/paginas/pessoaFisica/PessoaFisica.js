@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from '../../componentes/link/Link'
 import Grupo from '../../componentes/formulario/Grupo'
 import Botao from '../../componentes/formulario/Botao'
 
@@ -29,6 +30,10 @@ class PessoaFisica extends React.Component  {
             },
             desabilitado: true
         }
+    }
+
+    handleClick = () => {
+        this.props.onClick(undefined)
     }
 
     handleChange = (nomeDoInput, valorDoInput, erro = '') => {
@@ -73,6 +78,7 @@ class PessoaFisica extends React.Component  {
 
         return (
             <div className='pagina'>
+                <Link onClick={this.handleClick}>Voltar</Link>
                 <h2>Cadastro Pessoa Fisica </h2>
                 <form className='formulario' onSubmit={this.handleSubmit}>
                     <Grupo erro={this.state.nome.erro}>
