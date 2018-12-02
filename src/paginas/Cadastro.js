@@ -14,13 +14,9 @@ export default class Cadastro extends Component {
         }
     }
 
-    handleClick = e => {
-        e.preventDefault()
-
-        const clique = e.target.value
-
+    handleClick = value => {
         this.setState({
-            conteudo: clique
+            conteudo: value
         })
     }
 

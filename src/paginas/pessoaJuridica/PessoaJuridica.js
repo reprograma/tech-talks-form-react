@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from '../../componentes/link/Link'
 import Grupo from '../../componentes/formulario/Grupo'
 import Botao from '../../componentes/formulario/Botao'
 
@@ -29,6 +30,10 @@ export default class PessoaJuridica extends React.Component {
             },
             desabilitado: true
         }
+    }
+
+    handleClick = () => {
+        this.props.onClick(undefined)
     }
 
     handleChange = (nomeDoInput, valorDoInput, erro = '') => {
@@ -77,6 +82,7 @@ export default class PessoaJuridica extends React.Component {
         const estaDesabilitado = this.estaDesabilitado()
         return (
             <div className='pagina'>
+                <Link onClick={this.handleClick}>Voltar</Link>
                 <h2>Cadastro Pessoa Juridica</h2>
                 <form className='formulario' onSubmit={this.handleSubmit}>
                     <Grupo erro={this.state.razaoSocial.erro}>

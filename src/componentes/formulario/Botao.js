@@ -8,7 +8,7 @@ export default function Botao(props) {
     }
 
     return (
-        <button value={props.value} onClick={props.onClick} className={classes}>
+        <button onClick={props.onClick} className={classes}>
             {props.children}
         </button>
     )
